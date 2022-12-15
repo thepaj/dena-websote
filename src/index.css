@@ -1,0 +1,33 @@
+*,
+html  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100%;
+  background-color: '#FAF9F6';  
+  color: black;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation {
+  height: 8vh;
+}
+
+.home {
+  background-image: url('images/wp1.jpg');
+  background-color: 'FAF9F6';
+  opacity: 0.6;
+  height: 87vh;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
