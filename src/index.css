@@ -1,12 +1,11 @@
-*,
-html  {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   height: 100%;
 }
 
-body {
+html, body {
   font-family: 'Montserrat', sans-serif;
   min-height: 100%;
   background-color: '#FAF9F6';  
@@ -14,20 +13,69 @@ body {
 }
 
 .app {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-areas: 
+  "navbar"
+  "content"
+  "footer";
+}
+
+.content {
+  grid-area: content;
+  display: inline-block;
+}
+
+.nav-container {
+  grid-area: navbar;
+  height: 8vh;
+  text-align: center;
 }
 
 .navigation {
-  height: 8vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 1vh;
+  text-decoration: none;
+}
+
+.footer {
+  height: 5vh;
+  background-color: '#FAF9F6';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  bottom: 0;
+  width: 100%;
 }
 
 .home {
   background-image: url('images/wp1.jpg');
-  background-color: 'FAF9F6';
-  opacity: 0.6;
+  background-color: '#FAF9F6';
+  opacity: 1;
   height: 87vh;
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-heading {
+  font-size: 3vh;
+}
+
+.home-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
